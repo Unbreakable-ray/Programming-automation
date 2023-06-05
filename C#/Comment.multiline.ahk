@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-#HotIf WinActive("ahk_exe Code.exe") ;only works for Vicual code
-#HotIf WinActive("ahk_exe devenv.exe") ;only works for visual studio 
+#HotIf WinActive("ahk_exe Code.exe") || WinActive("ahk_exe devenv.exe") ;only works for Vicual code / studio
+
 
 ^Q::
 {
