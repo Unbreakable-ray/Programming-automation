@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-;#HotIf WinActive("ahk_exe Code.exe") ;only works for Vicual code
-;#HotIf WinActive("ahk_exe devenv.exe") ;only works for visual studio 
+#HotIf WinActive("ahk_exe Code.exe") ;only works for Vicual code
+#HotIf WinActive("ahk_exe devenv.exe") ;only works for visual studio 
 
 ^Q::
 {
@@ -14,8 +14,25 @@
             send("{Up}")
             return
         }
-    ;aa := ("/*`n" (A_Clipboard"`n") "`n*/")
     Sleep(10)
-    SendInput ("/*`n" (A_Clipboard) "{Enter}*/")
-    return
+    aa := ("/*`n" (A_Clipboard) "`n`n*/")
+    SendInput (aa)
 }
+
+
+
+
+
+    /*
+    Sendinput ("/*")
+    Sendinput ("{Enter}")
+    Sendinput (A_Clipboard)
+    Sleep(100)
+    Sendinput ("`n {Enter}")
+    Sleep(100)
+    Sendinput("*/")
+    return
+    */
+
+
+    ;@xmaxrayx ;@unbreakable-ray
