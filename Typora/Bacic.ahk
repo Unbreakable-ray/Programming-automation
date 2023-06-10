@@ -32,13 +32,13 @@ f1:: ; add " ` "
                {
     global aa
     A_Clipboard := "" 
-    Send "^c"  
+    Send "^x"  
             if !ClipWait(0.5)
                 { ;bold by send keybored
 
             ;Send '{Blind}+{Left}' ;dost work
             Send("{shift Down}^{Left}{shift Up}") 
-            Send "^c"
+            Send "^x"
             if !ClipWait(0.1) ;no text
                                 {
                                     send ("````")
@@ -73,10 +73,11 @@ f1:: ; add " ` "
 +F1:: ;remove " ` "
         {
             A_Clipboard := ""
-            Send '^c'
+            Send '^x'
             if !ClipWait(2)
             {
                 MsgBox "no text selected", "err"
+                return
             }
             modClipbord_God := StrReplace(A_Clipboard, "``", "") ;remove " ` "
             A_Clipboard :=modClipbord_God
@@ -97,4 +98,21 @@ Enter::
 +Enter::
 {
 Send ("<br>")
+}
+
+;===============================[Strikethrough  ~~ ]==========================
+
+
+$^-::
+{
+A_Clipboard := ""
+Send "^c"
+if !ClipWait(2)
+    {
+    MsgBox "no text"
+    return
+    }
+modClipbord_God := ("~~" . A_Clipboard . "~~")
+A_Clipboard := modClipbord_God
+Send '^v'
 }
