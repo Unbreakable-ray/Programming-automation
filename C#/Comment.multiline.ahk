@@ -18,8 +18,8 @@
         }
     Sleep(10)
     aa := ("/*`n" (A_Clipboard) "`n`n*/")
-    A_Clipboard = aa
-    Send, "^v"
+    A_Clipboard := aa
+    Send "^v"
 
     ;SendInput (aa) ;too slow
 }
