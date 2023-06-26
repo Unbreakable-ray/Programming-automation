@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-#HotIf WinActive("ahk_exe vivaldi.exe") || WinActive("ahk_exe devenv.exe") || WinActive("ahk_exe Code.exe") || WinActive("ahk_exe Typora.exe")  ;only works for these
+#HotIf WinActive("ahk_exe vivaldi.exe") || WinActive("ahk_exe devenv.exe") || WinActive("ahk_exe Code.exe") ;|| WinActive("ahk_exe Typora.exe")  ;only works for these
 
 f1::
 {
