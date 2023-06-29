@@ -12,8 +12,7 @@ author :="@xMaxrayx @Unbreakable-ray"
 stamp := author timeString
 
 ;MsgBox stamp  
-
-
+  
 A_Clipboard := stamp
 Send    '^v' 
 }
