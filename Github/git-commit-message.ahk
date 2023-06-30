@@ -5,7 +5,7 @@
 
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-;#HotIf WinActive("ahk_exe GitHubDesktop.exe") 
+#HotIf WinActive("ahk_exe GitHubDesktop.exe") 
 
 
 author := "@xMaxrayx @unbreakable-ray"
