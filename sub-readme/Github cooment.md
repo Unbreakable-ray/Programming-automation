@@ -2,7 +2,7 @@
 
 Small AHK script to write git commit message faster with just 1-2 keys for one word.
 
-<br><br><br>
+<br>
 
 ## How to use it:
 
@@ -14,7 +14,7 @@ Small AHK script to write git commit message faster with just 1-2 keys for one w
 
   it will appear like this :
 
-<br><br><br><br><br><br><br><br>
+<br><br>
 
 <img src="./readme-data/image-20230630100130929.png" alt="image-20230630100130929" style="zoom: 67%;" />
 
